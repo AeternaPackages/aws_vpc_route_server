@@ -1,9 +1,4 @@
 # --- aws_vpc_route_server ---
-output "vpc_route_servers_id" {
-  description = "Map of id values across all vpc_route_servers, keyed the same as var.vpc_route_servers"
-  value       = module.vpc_route_servers.vpc_route_servers_id
-}
-
 output "vpc_route_servers_amazon_side_asn" {
   description = "Map of amazon_side_asn values across all vpc_route_servers, keyed the same as var.vpc_route_servers"
   value       = module.vpc_route_servers.vpc_route_servers_amazon_side_asn
@@ -55,11 +50,6 @@ output "vpc_route_servers_tags_all" {
 }
 
 # --- aws_vpc_route_server_endpoint ---
-output "vpc_route_server_endpoints_id" {
-  description = "Map of id values across all vpc_route_server_endpoints, keyed the same as var.vpc_route_server_endpoints"
-  value       = module.vpc_route_server_endpoints.vpc_route_server_endpoints_id
-}
-
 output "vpc_route_server_endpoints_arn" {
   description = "Map of arn values across all vpc_route_server_endpoints, keyed the same as var.vpc_route_server_endpoints"
   value       = module.vpc_route_server_endpoints.vpc_route_server_endpoints_arn
@@ -111,11 +101,6 @@ output "vpc_route_server_endpoints_vpc_id" {
 }
 
 # --- aws_vpc_route_server_propagation ---
-output "vpc_route_server_propagations_id" {
-  description = "Map of id values across all vpc_route_server_propagations, keyed the same as var.vpc_route_server_propagations"
-  value       = module.vpc_route_server_propagations.vpc_route_server_propagations_id
-}
-
 output "vpc_route_server_propagations_region" {
   description = "Map of region values across all vpc_route_server_propagations, keyed the same as var.vpc_route_server_propagations"
   value       = module.vpc_route_server_propagations.vpc_route_server_propagations_region
@@ -132,11 +117,6 @@ output "vpc_route_server_propagations_route_table_id" {
 }
 
 # --- aws_vpc_route_server_vpc_association ---
-output "vpc_route_server_vpc_associations_id" {
-  description = "Map of id values across all vpc_route_server_vpc_associations, keyed the same as var.vpc_route_server_vpc_associations"
-  value       = module.vpc_route_server_vpc_associations.vpc_route_server_vpc_associations_id
-}
-
 output "vpc_route_server_vpc_associations_region" {
   description = "Map of region values across all vpc_route_server_vpc_associations, keyed the same as var.vpc_route_server_vpc_associations"
   value       = module.vpc_route_server_vpc_associations.vpc_route_server_vpc_associations_region
@@ -153,11 +133,6 @@ output "vpc_route_server_vpc_associations_vpc_id" {
 }
 
 # --- aws_vpc_route_server_peer ---
-output "vpc_route_server_peers_id" {
-  description = "Map of id values across all vpc_route_server_peers, keyed the same as var.vpc_route_server_peers"
-  value       = module.vpc_route_server_peers.vpc_route_server_peers_id
-}
-
 output "vpc_route_server_peers_arn" {
   description = "Map of arn values across all vpc_route_server_peers, keyed the same as var.vpc_route_server_peers"
   value       = module.vpc_route_server_peers.vpc_route_server_peers_arn

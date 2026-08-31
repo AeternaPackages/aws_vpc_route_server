@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.vpc_route_servers : {
       for k2, v2 in coalesce(v1.vpc_route_server_endpoints, {}) :
       "${k1}/${k2}" => merge(v2, {
-        route_server_id = module.vpc_route_servers.vpc_route_servers_id["${k1}"]
+        route_server_id = module.vpc_route_servers.vpc_route_servers_route_server_id["${k1}"]
       })
     }
   ]...)
@@ -14,7 +14,7 @@ locals {
     for k1, v1 in var.vpc_route_servers : {
       for k2, v2 in coalesce(v1.vpc_route_server_propagations, {}) :
       "${k1}/${k2}" => merge(v2, {
-        route_server_id = module.vpc_route_servers.vpc_route_servers_id["${k1}"]
+        route_server_id = module.vpc_route_servers.vpc_route_servers_route_server_id["${k1}"]
       })
     }
   ]...)
@@ -23,7 +23,7 @@ locals {
     for k1, v1 in var.vpc_route_servers : {
       for k2, v2 in coalesce(v1.vpc_route_server_vpc_associations, {}) :
       "${k1}/${k2}" => merge(v2, {
-        route_server_id = module.vpc_route_servers.vpc_route_servers_id["${k1}"]
+        route_server_id = module.vpc_route_servers.vpc_route_servers_route_server_id["${k1}"]
       })
     }
   ]...)
@@ -33,7 +33,7 @@ locals {
       for k2, v2 in coalesce(v1.vpc_route_server_endpoints, {}) : {
         for k3, v3 in coalesce(v2.vpc_route_server_peers, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          route_server_endpoint_id = module.vpc_route_server_endpoints.vpc_route_server_endpoints_id["${k1}/${k2}"]
+          route_server_endpoint_id = module.vpc_route_server_endpoints.vpc_route_server_endpoints_route_server_endpoint_id["${k1}/${k2}"]
         })
       }
     ]...)
